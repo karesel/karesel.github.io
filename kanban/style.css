@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 2rem;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.board {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: .5rem;
+    background: #222;
+    flex-grow: 1;
+    min-width: 33%;
+}
+
+.coltitle {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+}
+
+hr {
+    width: 100%;
+    margin: 0px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background: #444;
+    margin: .35rem;
+    padding: .35rem;
+    max-width: 100%;
+}
+
+.card-text {
+    overflow-wrap: anywhere;
+    flex-grow: 1;
+}
+
+button {
+    font-size: 1.5rem;
+}
