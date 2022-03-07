@@ -42,19 +42,9 @@ function addcard(btn) {
 
     newcarddeletebtn = document.createElement("button")
     newcarddeletebtn.innerHTML = "&Cross;"
+    newcarddeletebtn.classList.add("delbutton")
     newcarddeletebtn.addEventListener("click", (ev) => { ev.currentTarget.parentNode.remove() });
     newcard.appendChild(newcarddeletebtn)
 
     column.appendChild(newcard)
 }
-
-function rndstr(count) {
-    var result = ""
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    for (var i = 0; i < count; i++) {
-        result += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return result;
-}
-
-
