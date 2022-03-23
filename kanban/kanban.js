@@ -48,3 +48,6 @@ function addcard(btn) {
 
     column.appendChild(newcard)
 }
+
+
+// todo: add double click to delete button
