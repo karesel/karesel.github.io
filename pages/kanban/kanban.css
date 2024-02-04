@@ -1,0 +1,84 @@
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.board {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    width: 33%;
+    flex-grow: 1;
+}
+
+.coltitle {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+}
+
+hr {
+    width: 100%;
+    margin: 0px;
+}
+
+.card {
+    display: flex;
+    align-items: stretch;
+    background: #444;
+    margin: .15rem .3rem;
+    padding: .3rem;
+    max-width: 100%;
+}
+
+.card-text {
+    overflow-wrap: anywhere;
+    flex-grow: 1;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.addbutton {
+    font-size: 1.7rem;
+    width: 2rem;
+    padding: 0;
+}
+
+.delbutton {
+    font-size: 1rem;
+}
+
+
+footer {
+    padding: .5rem;
+    padding-top: 0;
+}
+
+button {
+    font-size: 2rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" onclick="randomize()" style="margin: 0px; height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <script src="colors.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+</head>
+
+<body
+    style="margin: 0px; height: 100%; display: flex; justify-content: center; align-items: center; user-select: none; font-family: Quicksand; font-size: 30px;"
+    onclick="randomize()" onload="randomize()">
+</body>
+
+<script>
+    function randomize() {
+        choice = Math.floor(Math.random() * colors.length)
+        // choice = 3
+        choiceVal = Object.values(colors[choice])[0]
+        choiceName = Object.keys(colors[choice])[0].toUpperCase()
+
+        document.body.style.backgroundColor = choiceVal
+        document.body.style.color = pickTextColor(choiceVal)
+
+        document.body.innerText = choiceName
+    }
+
+
+    function pickTextColor(bgColor) {
+        var color = (bgColor.charAt(0) === '#') ? bgColor.substring(1, 7) : bgColor;
+        var r = parseInt(color.substring(0, 2), 16); // hexToR
+        var g = parseInt(color.substring(2, 4), 16); // hexToG
+        var b = parseInt(color.substring(4, 6), 16); // hexToB
+        limit = ((r * 0.299) + (g * 0.587) + (b * 0.114))
+        console.log(limit)
+        return (limit > 186) ? "#000000" : "#FFFFFF";
+    }
+
+</script>
+
+</html>

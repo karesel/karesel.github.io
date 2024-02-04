@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Average Calculator</title>
+    <link rel="stylesheet" href="../../res/main.css">
+    <link rel="stylesheet" href="average.css">
+    <script src="average.js"></script>
+</head>
+
+<body>
+    <form onsubmit="event.preventDefault()">
+        <label>LOTS:
+            <input type="text" id="lots">
+        </label>
+        <label>PRICE:
+            <input type="text" id="price">
+        </label>
+        <button type="submit" onclick="addrow()">add</button>
+
+    </form>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>LOTS</th>
+                <th>PRICE</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>AVG</td>
+                <td id="avg"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>
