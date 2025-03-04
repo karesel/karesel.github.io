@@ -1,16 +1,17 @@
+// js structure to save in memory
+
+let todos = {};
+todos.todo  = [];
+todos.doing = [];
+todos.done  = [];
+
 dragged_el = null
 
-function dragstart_handler(ev) {
-    dragged_el = ev.currentTarget
-}
+function dragstart_handler(ev) { dragged_el = ev.currentTarget }
 
-function dragover_handler(ev) {
-    ev.preventDefault();
-}
+function dragover_handler(ev) { ev.preventDefault(); }
 
-function dragend_handler(ev) {
-    dragged_el = null
-}
+function dragend_handler(ev) { dragged_el = null }
 
 function drop_handler(ev) {
     ev.preventDefault();
@@ -41,13 +42,14 @@ function addcard(btn) {
     newcard.appendChild(newcardtext)
 
     newcarddeletebtn = document.createElement("button")
-    newcarddeletebtn.innerHTML = "&Cross;"
+    newcarddeletebtn.innerHTML = "&cross;"
     newcarddeletebtn.classList.add("delbutton")
     newcarddeletebtn.addEventListener("click", (ev) => { ev.currentTarget.parentNode.remove() });
     newcard.appendChild(newcarddeletebtn)
 
     column.appendChild(newcard)
-}
 
+    todos
+}
 
 // todo: add double click to delete button
