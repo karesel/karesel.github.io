@@ -1,3 +1,8 @@
+:root{
+  --bg: #131313;
+  --fg: #eee;
+}
+
 @font-face {
     font-family: "Poppins",
     src: url("Poppins-Regular.ttf")
@@ -5,8 +10,8 @@
 
 * {
     font-family: "Poppins", sans-serif;
-    background-color: #131313;
-    color: #eee;
+    background-color: var(--bg);
+    color: var(--fg);
 }
 
 a {
